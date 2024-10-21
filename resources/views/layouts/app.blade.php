@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +21,7 @@
 </head>
 <body>
     @include('components.navbar')
+    @include('components.hero-header')
     @include('components.about')
     @include('components.service')
     @include('components.destination')
