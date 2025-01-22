@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard')
+@section('title', 'WZLCOME')
 
 @section('content')
     @include('components.hero')
 
-   
+
 @endsection
