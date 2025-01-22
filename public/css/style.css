@@ -541,6 +541,7 @@
         font-size: 0.875rem; /* Réduire la taille de la police */
     }
 }
+<<<<<<< HEAD
 .fa-map-marker-alt {
     color: #e63946; /* Rouge vif */
 }
@@ -582,3 +583,5 @@
 .btn-close {
     font-size: 1.2rem;
 }
+=======
+>>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d

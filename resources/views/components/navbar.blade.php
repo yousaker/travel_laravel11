@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -12,6 +13,9 @@
 @endif
 
 
+=======
+<div class="container-fluid bg-dark px-5 d-none d-lg-block">
+>>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
     <div class="row gx-0">
         <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
             <div class="d-inline-flex align-items-center" style="height: 45px;">
@@ -212,7 +216,10 @@
 </div>
 <!-- Modal pour Ajouter une publication -->
 <!-- Modal pour ajouter une publication -->
+<<<<<<< HEAD
 @auth
+=======
+>>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
 <div class="modal fade" id="addPublicationModal" tabindex="-1" aria-labelledby="addPublicationModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content rounded shadow">
@@ -233,9 +240,13 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @endauth
 
 @auth
+=======
+
+>>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
 <!-- Modal pour Ajouter une publication -->
 <div class="modal fade" id="addTahwissaModal" tabindex="-1" aria-labelledby="addTahwissaModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -263,6 +274,10 @@
                         </select>
                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
                     <!-- Liste des wilayas d'Algérie -->
                     <div class="mb-3">
                         <label for="wilaya" class="form-label">Wilaya</label>
@@ -328,7 +343,10 @@
                             <option value="El Menia">El Menia</option>
                         </select>
                     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
                     <div class="mb-3">
                         <label for="adresse" class="form-label">Adresse</label>
                         <input type="text" class="form-control rounded" id="adresse" name="adresse" required>
@@ -345,6 +363,7 @@
                     </div>
 
                     <div class="mb-3">
+<<<<<<< HEAD
                         <label for="petite_description" class="form-label">Petite Description</label>
                         <textarea class="form-control rounded" id="petite_description" name="petite_description" rows="2"></textarea>
                     </div>
@@ -355,6 +374,8 @@
                     </div>
 
                     <div class="mb-3">
+=======
+>>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
                         <label for="description" class="form-label">Description</label>
                         <textarea class="form-control rounded" id="description" name="description" rows="4"></textarea>
                     </div>
@@ -370,9 +391,14 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @endauth
 
 @auth
+=======
+
+
+>>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
 <!-- Modal pour Ajouter un produit -->
 <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -382,6 +408,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+<<<<<<< HEAD
                 <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
@@ -403,6 +430,21 @@
                     <div class="mb-3">
                         <label for="images" class="form-label">Image du produit</label>
                         <input type="file" class="form-control rounded" id="images" name="images" accept="image/*" required>
+=======
+                <form action="" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="product_name" class="form-label">Nom du produit</label>
+                        <input type="text" class="form-control rounded" id="product_name" name="product_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Prix</label>
+                        <input type="number" class="form-control rounded" id="price" name="price" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="product_image" class="form-label">Image du produit</label>
+                        <input type="file" class="form-control rounded" id="product_image" name="product_image" required>
+>>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
                     </div>
                     <button type="submit" class="btn btn-primary w-100 rounded-pill">Ajouter Produit</button>
                 </form>
@@ -410,4 +452,7 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @endauth
+=======
+>>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d

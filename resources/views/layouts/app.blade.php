@@ -14,7 +14,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+<<<<<<< HEAD
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+=======
+>>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
 
 <!-- Bootstrap JS (avec Popper.js) -->
 
@@ -28,7 +31,10 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
     @include('components.navbar')
     @include('components.hero-header')
     @include('components.about')
@@ -64,6 +70,7 @@
                 });
             });
         });
+<<<<<<< HEAD
 
 document.addEventListener("DOMContentLoaded", function () {
     const successAlert = document.getElementById("success-alert");
@@ -142,6 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
+=======
+>>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
     </script>
 
 
