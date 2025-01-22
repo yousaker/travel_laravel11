@@ -11,7 +11,12 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->web([
+            \App\Http\Middleware\LocalizationMiddleware::class, // أضف هذا السطر
+            \Illuminate\Cookie\Middleware\EncryptCookies::class,
+            \Illuminate\Session\Middleware\StartSession::class,
+            // ... باقي الـ Middlewares
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

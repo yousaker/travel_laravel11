@@ -3,38 +3,34 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TahwissaController;
-<<<<<<< HEAD
 use App\Http\Controllers\ProductController;
-=======
+use App\Http\Controllers\ReservationTahwissaController;
+use App\Http\Controllers\ReservationProduitController;
+use App\Http\Controllers\DashboardController;
 
->>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
 
 // Page d'accueil publique (sans middleware)
 Route::get('/', [TahwissaController::class, 'welcome'])->name('welcome');
 
-
-<<<<<<< HEAD
+Route::get('/lang/{locale}', function ($locale) {
+    if (!in_array($locale, ['en', 'ar'])) {
+        abort(400);
+    }
+    session()->put('locale', $locale);
+    return redirect()->back();
+})->name('lang.switch');
 Route::get('/dashboard', [TahwissaController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-
+Route::get('/tahwissa', [TahwissaController::class, 'show'])->name('tahwissa.show');
+Route::get('/load-more-tahwiss', [TahwissaController::class, 'loadMore'])->name('load.more.tahwiss');
+Route::post('/dashboard', [TahwissaController::class, 'store'])->name('dashboard.store');
 
 // Page welcome protégée (si nécessaire)
 Route::get('/welcome', [TahwissaController::class, 'welcome'])
     ->middleware(['auth', 'verified'])
     ->name('welcome');
-=======
-
-Route::get('/dashboard', function () {
-    $categories = \App\Models\Category::all();
-    return view('dashboard', compact('categories'));
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/welcome', function () {
-    return view('welcome');
-})->middleware(['auth', 'verified'])->name('welcome');
->>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -42,9 +38,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::post('/dashboard', [TahwissaController::class, 'store'])->name('dashboard.store');
-<<<<<<< HEAD
+Route::get('/product', [ProductController::class, 'show'])->name('product.show');
 Route::post('/products', [ProductController::class, 'store'])->name('products.store');
-=======
->>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
+Route::get('/load-more-products', [ProductController::class, 'loadMoreProducts'])->name('load.more.products');
+
+
+Route::post('/reservations', [ReservationTahwissaController::class, 'store'])
+    ->name('reservations.store');
+
+Route::post('/reservation', [ReservationProduitController::class, 'store'])->name('reservationProduite.store');
+
+Route::get('/dashboardAdmin', [DashboardController::class, 'index'])->name('dashboard.index');
+
+
+
 require __DIR__.'/auth.php';

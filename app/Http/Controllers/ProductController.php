@@ -11,8 +11,29 @@ class ProductController extends Controller
 {
     // Afficher tous les produits
 
-   
+    public function show()
+    {
+        // Récupérer les informations nécessaires depuis la base de données ou autre source
+        $categories = Category::all();
+        // Récupérer les 6 premières Tahwiss avec leurs relations
+        $products = Product::with('user')->take(6)->get();
 
+        // Passer les données à la vue
+        return view('ShowAllProduct', compact('products','categories'));
+    }
+    public function loadMoreProducts(Request $request)
+    {
+        $offset = $request->input('offset', 6);
+        $limit = $request->input('limit', 3);
+
+        // Récupérer les produits supplémentaires
+        $products = Product::with('user')
+            ->skip($offset)
+            ->take($limit)
+            ->get();
+
+        return response()->json($products);
+    }
     // Ajouter un nouveau produit
     public function store(Request $request)
 {

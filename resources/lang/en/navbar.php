@@ -1,0 +1,28 @@
+<?php
+return [
+    'home' => 'Home',
+    'tahwissa' => 'Tahwissa',
+    'product' => 'Product',
+    'services' => 'Services',
+    'contact' => 'Contact',
+    'add_tahwissa' => 'Add Tahwissa',
+    'register' => 'Register',
+    'login' => 'Login',
+    'my_account' => 'My Account',
+    'profile' => 'Profile',
+    'settings' => 'Settings',
+    'dashboard' => 'Dashboard',
+    'logout' => 'Logout',
+    'address' => '123 Street, New York, USA',
+    'phone' => '+012 345 6789',
+    'email' => 'info@example.com',
+    'brand' => 'Tourist',
+    'add_publication' => 'Add Publication',
+    'add_product' => 'Add Product',
+    'enjoy_vacation' => 'Enjoy Your Vacation With Us',
+    'explore_destinations' => 'Explore beautiful destinations with amazing packages',
+
+    'vacation_description' => 'Tempor erat elitr rebum at clita diam amet diam et eos erat ipsum lorem sit',
+    'search_placeholder' => 'Eg: Thailand',
+    'search_button' => 'Search',
+];

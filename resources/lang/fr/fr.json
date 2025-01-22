@@ -1,0 +1,18 @@
+{
+    "navbar": {
+        "home": "Accueil",
+        "tahwissa": "Tahwissa",
+        "product": "Produit",
+        "services": "Services",
+        "contact": "Contact",
+        "my_account": "Mon Compte",
+        "profile": "Profil",
+        "settings": "Paramètres",
+        "dashboard": "Tableau de bord",
+        "logout": "Déconnexion",
+        "register": "S'inscrire",
+        "login": "Connexion",
+        "add_tahwissa": "Ajouter un Tahwissa"
+    }
+}
+php artisan make:middleware SetLocale

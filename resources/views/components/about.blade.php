@@ -1,4 +1,4 @@
-<div class="container-xxl py-5">
+<div class="container-xxl py-5" dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}">
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
@@ -7,31 +7,44 @@
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                <h1 class="mb-4">Welcome to <span class="text-primary">Tourist</span></h1>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                <!-- Titre "About Us" traduit -->
+                <h6 class="section-title bg-white text-start text-primary pe-3">
+                    {{ __('about.about_us') }}
+                </h6>
+
+                <!-- Titre "Welcome to Tourist" traduit -->
+                <h1 class="mb-4">
+                    {{ __('about.welcome') }} <span class="text-primary">Tourist</span>
+                </h1>
+
+                <!-- Descriptions traduites -->
+                <p class="mb-4">{{ __('about.description_1') }}</p>
+                <p class="mb-4">{{ __('about.description_2') }}</p>
+
+                <!-- Liste des services traduits -->
                 <div class="row gy-2 gx-4 mb-4">
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{ __('about.first_class_flights') }}</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Handpicked Hotels</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{ __('about.handpicked_hotels') }}</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>5 Star Accommodations</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{ __('about.five_star_accommodations') }}</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Latest Model Vehicles</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{ __('about.latest_model_vehicles') }}</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 Premium City Tours</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{ __('about.premium_city_tours') }}</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{ __('about.service_24_7') }}</p>
                     </div>
                 </div>
-                <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+
+                <!-- Bouton "Read More" traduit -->
+                <a class="btn btn-primary py-3 px-5 mt-2" href="">{{ __('about.read_more') }}</a>
             </div>
         </div>
     </div>

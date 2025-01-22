@@ -28,4 +28,10 @@ class Product extends Model
     {
         return $this->belongsTo(User::class, 'id_user', 'id');
     }
+    // In Product model:
+public function reservationsProduits()
+{
+    return $this->hasMany(ReservationProduit::class, 'id_produit');
+}
+
 }

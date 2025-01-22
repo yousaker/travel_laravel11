@@ -68,12 +68,17 @@
 >
     Read More
 </button>
-                            <button
-                              class="btn btn-sm px-3 btn-custom-light"
-                              style="border-radius: 0 30px 30px 0;"
-                            >
-                              Book Now
-                            </button>
+<button
+class="btn btn-sm px-3 btn-custom-light"
+style="border-radius: 0 30px 30px 0;"
+data-bs-toggle="modal"
+data-bs-target="#reservationModal"
+data-id="{{ $product->id_produit }}"
+data-name="{{ $product->name }}"
+>
+Book Now
+</button>
+
                         </div>
                     </div>
                 </div>
@@ -85,6 +90,7 @@
 <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content" style="border-radius: 15px; border: none;">
+            <!-- En-tête de la modal avec une couleur attrayante -->
             <div class="modal-header" style="background: #2A9D8F; border-bottom: 3px solid #264653;">
                 <h5 class="modal-title" id="productModalLabel" style="color: white; font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: 600;">
                     <i class="fas fa-info-circle me-2"></i>Détails du Produit
@@ -132,12 +138,14 @@
             </div>
 
             <div class="modal-footer" style="border-top: 2px solid #e9ecef;">
+                <!-- Bouton secondaire avec une couleur douce -->
                 <button type="button"
                         class="btn btn-lg px-4"
                         style="background: #f8f9fa; color: #6c757d; border: 1px solid #dee2e6;"
                         data-bs-dismiss="modal">
                     Fermer
                 </button>
+                <!-- Bouton principal avec une couleur attrayante -->
                 <button type="button"
                         class="btn btn-lg px-4"
                         id="bookProductBtn"
@@ -148,3 +156,44 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- En-tête de la modal avec une couleur attrayante -->
+            <div class="modal-header bg-gradient text-white">
+                <h5 class="modal-title" id="reservationModalLabel">Réserver un produit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="reservationForm" method="POST" action="{{ route('reservationProduite.store') }}">
+                @csrf
+                <div class="modal-body">
+                    <input type="hidden" name="id_produit" id="reservationProductId">
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" class="form-control" name="name" id="name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="prenom" class="form-label">Prénom</label>
+                        <input type="text" class="form-control" name="prenom" id="prenom" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tel" class="form-label">Téléphone</label>
+                        <input type="tel" class="form-control" name="tel" id="tel" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- Bouton secondaire avec une couleur douce -->
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <!-- Bouton de soumission avec une couleur vive -->
+                    <button type="submit" class="btn btn-success">Réserver</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

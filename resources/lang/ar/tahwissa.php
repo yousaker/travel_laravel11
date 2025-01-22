@@ -1,0 +1,21 @@
+<?php
+return [
+    'tahwissa' => 'تهويسة',
+    'our_tahwissa' => 'تهويساتنا',
+    'location' => 'الموقع',
+    'days' => 'أيام',
+    'guide' => 'المرشد',
+    'price' => 'السعر',
+    'description' => 'الوصف',
+    'phone' => 'الهاتف',
+    'read_more' => 'اقرأ المزيد',
+    'book_now' => 'احجز الآن',
+    'close' => 'إغلاق',
+    'reserve' => 'حجز',
+    'duration' => 'المدة',
+    'address' => 'العنوان',
+    'reserve_now' => 'Réserver maintenant',
+'confirm_reservation' => 'Confirmer la réservation',
+'reservation_success' => 'Réservation effectuée avec succès!',
+'surname' => 'Prénom',
+];

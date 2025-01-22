@@ -1,0 +1,21 @@
+<?php
+return [
+    'tahwissa' => 'Tahwissa',
+    'our_tahwissa' => 'Our Tahwissa',
+    'location' => 'Location',
+    'days' => 'days',
+    'guide' => 'Guide',
+    'price' => 'Price',
+    'description' => 'Description',
+    'phone' => 'Phone',
+    'read_more' => 'Read More',
+    'book_now' => 'Book Now',
+    'close' => 'Close',
+    'reserve' => 'Reserve',
+    'duration' => 'Duration',
+    'address' => 'Address',
+    'reserve_now' => 'Réserver maintenant',
+'confirm_reservation' => 'Confirmer la réservation',
+'reservation_success' => 'Réservation effectuée avec succès!',
+'surname' => 'Prénom',
+];

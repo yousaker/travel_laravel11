@@ -3,17 +3,12 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
 use App\Models\Category;
-=======
-use App\Models\Categorie;
->>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
 use App\Models\Tahwiss;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-<<<<<<< HEAD
 use App\Models\Product;
 class TahwissaController extends Controller
 {
@@ -22,24 +17,46 @@ class TahwissaController extends Controller
         $categories = Category::all();
         $products = Product::with('user')->get();
         // Récupérer toutes les Tahwiss avec leurs relations
-        $tahwiss = Tahwiss::with(['category', 'user'])->get();
+        $tahwiss = Tahwiss::with(['category', 'user'])->latest()->take(3)->get();
+
 
         // Passer les données à la vue
         return view('dashboard', compact('categories', 'tahwiss','products'));
     }
+    public function show()
+    {
+        // Récupérer les informations nécessaires depuis la base de données ou autre source
+        $categories = Category::all();
+
+        // Récupérer les 6 premières Tahwiss avec leurs relations
+        $tahwiss = Tahwiss::with(['category', 'user'])->take(6)->get();
+
+        // Passer les données à la vue
+        return view('ShowAlltahwissa', compact('categories', 'tahwiss'));
+    }
+    public function loadMore(Request $request)
+{
+    $offset = $request->input('offset', 6);
+    $limit = $request->input('limit', 3);
+
+    // Récupérer les Tahwiss supplémentaires
+    $tahwiss = Tahwiss::with(['category', 'user'])
+        ->skip($offset)
+        ->take($limit)
+        ->get();
+
+    return response()->json($tahwiss);
+}
     public function welcome()
 {
     $categories = Category::all();
     // Récupérer les données nécessaires pour la vue "welcome"
-    $tahwiss = Tahwiss::with(['category', 'user'])->take(3)->get(); // Exemple: 3 Tahwiss
-    $products = Product::with('user')->get();
+    $tahwiss = Tahwiss::with(['category', 'user'])->latest()->take(3)->get();
+
+    $products = Product::with('user')->latest()->take(3)->get();
 
     return view('welcome', compact('categories', 'tahwiss','products'));
 }
-=======
-class TahwissaController extends Controller
-{
->>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
     public function store(Request $request)
     {
         // Validation des données envoyées par le formulaire
@@ -50,11 +67,8 @@ class TahwissaController extends Controller
             'adresse' => 'required|string|max:255',
             'numero_telephone' => 'required|string|max:20',
             'prix' => 'required|numeric|min:0',
-<<<<<<< HEAD
             'petite_description' => 'nullable|string|max:255',  // Nouveau champ
             'nombre_de_jours' => 'nullable|integer|min:0',     // Nouveau champ
-=======
->>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
             'description' => 'nullable|string',
             'image_tahwissa' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -67,30 +81,19 @@ class TahwissaController extends Controller
         // Enregistrer la publication dans la base de données
         $tahwissa = new Tahwiss();
         $tahwissa->titre = $request->input('titre');
-<<<<<<< HEAD
         $tahwissa->categorie = $request->input('categorie');
-=======
-        $tahwissa->categorie_id = $request->input('categorie');
->>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
         $tahwissa->id_user = auth()->id(); // Utilisateur authentifié
         $tahwissa->wilaya = $request->input('wilaya');
         $tahwissa->adresse = $request->input('adresse');
         $tahwissa->numero_telephone = $request->input('numero_telephone');
         $tahwissa->prix = $request->input('prix');
-<<<<<<< HEAD
         $tahwissa->petite_description = $request->input('petite_description');  // Nouveau champ
         $tahwissa->nombre_de_jours = $request->input('nombre_de_jours');       // Nouveau champ
-=======
->>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
         $tahwissa->description = $request->input('description');
         $tahwissa->image_tahwissa = $imagePath;
         $tahwissa->save();
 
         // Rediriger vers une page de succès ou afficher un message
-<<<<<<< HEAD
         return redirect()->back()->with('Add', value: 'Tahwissa ajoutée avec succès!');
-=======
-        return redirect()->route('tahwissa.index')->with('success', 'Tahwissa ajoutée avec succès!');
->>>>>>> fe1a1c2c2534ebdb1e2a6b0ab63fa87ec0b09e5d
     }
 }
