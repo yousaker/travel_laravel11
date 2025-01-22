@@ -2,10 +2,19 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TahwissaController;
+
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::get('/dashboard', function () {
+    $categories = \App\Models\Category::all();
+    return view('dashboard', compact('categories'));
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -17,4 +26,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::post('/dashboard', [TahwissaController::class, 'store'])->name('dashboard.store');
 require __DIR__.'/auth.php';

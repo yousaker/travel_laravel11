@@ -22,7 +22,10 @@ class User extends Authenticatable implements MustVerifyEmail
         'email',
         'password',
     ];
-
+    public function tahwissat()
+    {
+        return $this->hasMany(Tahwiss::class, 'id_user', 'id');
+    }
     /**
      * The attributes that should be hidden for serialization.
      *
