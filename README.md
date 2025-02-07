@@ -1,11 +1,10 @@
-![screencapture-127-0-0-1-8000-2025-02-07-17_54_44](https://github.com/user-attachments/assets/b282ed6a-c497-48f3-b5c9-7ea5f58b25cd)
-![Uploading screencapture-127-0-0-1-8000![Capture d'écran 2025-02-07 175548](https://github.com/user-attachments/assets/7a9bfa39-bdbc-4532-be6a-359eed1d138e)
--2025-02-07-17_54_44.png…]()
-![Capture d'écran 2025-02-07 175914](https://github.com/user-attachments/assets/e0ae18e4-393a-463a-8532-51e586c09480)
-![Capture d'écran 2025-02-07 180114](https://github.com/user-attachments/assets/f9b0ab80-2285-40f2-b076-e994468b20f2)
-
-![Capture d'écran 2025-02-07 180010](https://github.com/user-attachments/assets/19d1e67e-c09e-4db9-8677-22b4c1d6bb8e)
-
+![screencapture-127-0-0-1-8000-2025-02-07-17_54_44](https://github.com/user-attachments/assets/01721938-6e8d-44ed-91f8-6ed25b04ef07)
+![screencapture-127-0-0-1-8000-2025-02-07-17_54_16](https://github.com/user-attachments/assets/331b81e6-4141-46ce-9b98-e203bb7389a2)
+![Capture d'écran 2025-02-07 180010](https://github.com/user-attachments/assets/031ef86e-17a1-4d17-a94d-f83d8f3c57da)
+025-02-07-17_54_44.png…]()
+![Capture d'écran 2025-02-07 180114](https://github.com/user-attachments/assets/bfe83995-2fa1-42ec-b98d-eaa3914b4390)
+![Capture d'écran 2025-02-07 175914](https://github.com/user-attachments/assets/aa9ceffb-fa9c-4af8-8640-0ee4e3e5d238)
+Travel Laravel 11
 Ce projet est une application Laravel 11 de gestion de voyages multilingue.
 
 ## Installation
