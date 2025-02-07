@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\ReservationTahwissa;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ReservationProduit;
+
 class DashboardController extends Controller
 {
     public function index() {
@@ -31,44 +33,48 @@ class DashboardController extends Controller
         // Calculate the total reservations (sum of both Tahwissa and Product reservations)
     $totalReservations = $reservationsCount + $reservationsProductCount;
 
-    // Calculate percentage increase (for example, comparing with the previous week/month)
-    // For simplicity, let's assume you want to calculate the percentage increase from last week's reservations count.
+    $reservationsData = ReservationTahwissa::whereHas('tahwessa', function($query) {
+        $query->where('id_user', Auth::id());
+    })
+    ->get()
+    ->groupBy(function($date) {
+        return \Carbon\Carbon::parse($date->created_at)->format('Y-m-d'); // Format Jour-Mois-Année
+    });
 
-    $previousWeekReservations = 100; // Replace this with actual logic to fetch last week's reservations count
-    $percentageIncrease = 0;
-
-    if ($previousWeekReservations > 0) {
-        $percentageIncrease = (($totalReservations - $previousWeekReservations) / $previousWeekReservations) * 100;
-    }
-
-    // Get reservations per Tahwessa (grouped by Tahwessa ID for the authenticated user)
-    $tahwessaReservations = ReservationTahwissa::selectRaw('id_tahwessa, COUNT(*) as total_reservations')
-        ->whereHas('tahwessa', function($query) {
-            $query->where('id_user', Auth::id()); // Ensure reservations are only for the authenticated user
-        })
-        ->groupBy('id_tahwessa')
-        ->get();
-
+    // Préparer les données pour le graphique
     $labels = [];
     $data = [];
+    foreach ($reservationsData as $day => $reservations) {
+        $labels[] = $day;
+        $data[] = $reservations->count();
+    }
+    $reservationsProductData = ReservationProduit::whereHas('product', function($query) {
+        $query->where('id_user', Auth::id());
+    })
+    ->get()
+    ->groupBy(function($date) {
+        return \Carbon\Carbon::parse($date->created_at)->format('Y-m-d');
+    });
 
-    // Prepare the data for the chart
-    foreach ($tahwessaReservations as $reservation) {
-        $labels[] = 'Tahwessa ' . $reservation->id_tahwessa;
-        $data[] = $reservation->total_reservations;
+    $labelsProduct = [];
+    $dataProduct = [];
+    foreach ($reservationsProductData as $day => $reservations) {
+        $labelsProduct[] = $day;
+        $dataProduct[] = $reservations->count();
     }
 
-    // Pass all the data to the view, including totalReservations and percentageIncrease
     return view('text', compact(
         'tahwissaCount',
         'productCount',
         'reservationsCount',
         'reservationsProductCount',
         'totalReservations', // Pass totalReservations to the view
-        'percentageIncrease', // Pass percentageIncrease to the view
         'labels',
         'data',
-        'categories'
+        'categories',
+        'labelsProduct',
+        'dataProduct',
+
     ));
     }
 

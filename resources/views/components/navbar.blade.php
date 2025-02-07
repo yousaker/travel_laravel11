@@ -66,10 +66,14 @@
             <!-- Desktop Button -->
 
 
+
+
+
+            @auth
             <a style="width: 350px;color: black" href="#" class="btn btn-gradient rounded-pill py-2 px-4 d-none d-lg-inline-block" data-bs-toggle="modal" data-bs-target="#addPublicationModal">
                 <i class="fa fa-plus me-2"></i>{{ __('navbar.add_tahwissa') }}
             </a>
-
+            @endauth
             <div class="ms-3">
                 <a  style="color: black" href="{{ route('lang.switch', 'en') }}" class="btn btn-sm btn-outline-primary">EN</a>
                 <a   style="color: black" href="{{ route('lang.switch', 'ar') }}" class="btn btn-sm btn-outline-primary">AR</a>

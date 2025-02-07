@@ -1,8 +1,8 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Produits</h6>
-            <h1 class="mb-5">Nos Produits</h1>
+            <h6 class="section-title bg-white text-center text-primary px-3"> {{ __('tahwissa.products') }}</h6>
+            <h1 class="mb-5"> {{ __('tahwissa.our_products') }}</h1>
         </div>
         <div class="row g-4 justify-content-center">
             @foreach($products as $product)
@@ -66,7 +66,7 @@
     data-user="{{ $product->user->name ?? 'Anonyme' }}"
     data-telephone="{{ $product->telephone }}"
 >
-    Read More
+{{ __('tahwissa.read_more') }}
 </button>
 <button
 class="btn btn-sm px-3 btn-custom-light"
@@ -76,7 +76,7 @@ data-bs-target="#reservationModal"
 data-id="{{ $product->id_produit }}"
 data-name="{{ $product->name }}"
 >
-Book Now
+{{ __('tahwissa.book_now') }}
 </button>
 
                         </div>

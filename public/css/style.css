@@ -144,7 +144,7 @@
     position: relative;
     margin-right: 25px;
     padding: 35px 0;
-    color: #ffffff !important;
+
     font-size: 18px;
     font-weight: 600;
     outline: none;
@@ -559,33 +559,4 @@
 .btn-custom-light {
     background: #2a9d8f;
     color: white;
-}
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap");
-
-.info-item {
-    display: flex;
-    align-items: center;
-    transition: all 0.2s;
-    padding: 8px 12px;
-    border-radius: 8px;
-}
-
-.info-item:hover {
-    background-color: #f8f9fa;
-    transform: translateX(5px);
-}
-
-.modal-content {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.btn-close {
-    font-size: 1.2rem;
-}
-.modal-backdrop {
-    z-index: 1040 !important;
-}
-
-.modal {
-    z-index: 1050 !important;
 }

@@ -15,7 +15,7 @@ class TahwissaController extends Controller
     public function index()
     {
         $categories = Category::all();
-        $products = Product::with('user')->get();
+        $products = Product::with('user')->latest()->take(3)->get();
         // Récupérer toutes les Tahwiss avec leurs relations
         $tahwiss = Tahwiss::with(['category', 'user'])->latest()->take(3)->get();
 

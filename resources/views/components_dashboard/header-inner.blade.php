@@ -12,6 +12,13 @@
                 <i class="search-mobile-trigger-icon fa-solid fa-magnifying-glass"></i>
             </div><!--//col-->
             <div class="app-search-box col d-flex align-items-center">
+                <form class="app-search-form d-flex align-items-center ms-auto" style="max-width: 600px; flex-grow: 1;">
+                    <input type="text" placeholder="Search..." name="search" class="form-control search-input" style="height: 48px;">
+                    <button type="submit" class="btn search-btn btn-primary ms-2" style="height: 48px;">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <div></div>
                 <!-- Buttons on the Left -->
                 <div class="d-flex align-items-center me-3">
                     <!-- First Button -->
@@ -29,12 +36,7 @@
                 </div>
 
                 <!-- Search Form -->
-                <form class="app-search-form d-flex align-items-center ms-auto" style="max-width: 600px; flex-grow: 1;">
-                    <input type="text" placeholder="Search..." name="search" class="form-control search-input" style="height: 48px;">
-                    <button type="submit" class="btn search-btn btn-primary ms-2" style="height: 48px;">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </form>
+
             </div><!--//app-search-box-->
 
 

@@ -190,39 +190,118 @@
 </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="{{ asset('lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
     <script src="{{ asset('js/all.min.js') }}"></script>
 
     <div class="script">
         @yield('script')
     </div>
+
+
+
+
     <script>
-        var ctx = document.getElementById('canvas-barchart').getContext('2d');
-        var chart = new Chart(ctx, {
-            type: 'bar', // You can switch to 'line' or any other type if needed
-            data: {
-                labels: @json($labels), // Labels from your controller
-                datasets: [{
-                    label: 'Total Reservations',
-                    data: @json($data), // Data from your controller
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 1
-                }]
-            },
+        // Récupération des données depuis PHP
+        const barChartData = {
+            labels: @json($labels), // Jours des réservations
+            datasets: [{
+                label: 'Réservations par Jour',
+                data: @json($data), // Nombre de réservations par jour
+                backgroundColor: 'rgba(63, 128, 255, 0.5)',
+                borderColor: '#3F80FF',
+                borderWidth: 1
+            }]
+        };
+
+        // Configuration du graphique
+        const barChartConfig = {
+            type: 'bar',
+            data: barChartData,
             options: {
                 responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                    }
+                },
                 scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Jours'
+                        }
+                    },
                     y: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Nombre de Réservations'
+                        }
                     }
                 }
             }
+        };
+
+        // Initialisation du graphique
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const ctx = document.getElementById('canvas-barchart').getContext('2d');
+            new Chart(ctx, barChartConfig);
         });
     </script>
+<script>
+    // Récupération des données depuis PHP
+    const areaLineChartProductData = {
+        labels: @json($labelsProduct), // Jours des réservations produits
+        datasets: [{
+            label: 'Réservations de Produits par Jour',
+            data: @json($dataProduct), // Nombre de réservations produits par jour
+            borderColor: '#FF5733',
+            backgroundColor: 'rgba(255, 87, 51, 0.2)', // Couleur avec transparence
+            borderWidth: 2,
+            tension: 0.4,
+            fill: true // Activer le remplissage pour l'effet Area Chart
+        }]
+    };
 
+    // Configuration du graphique
+    const areaLineChartProductConfig = {
+        type: 'line',
+        data: areaLineChartProductData,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top',
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Jours'
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Nombre de Réservations de Produits'
+                    }
+                }
+            }
+        }
+    };
+
+    // Initialisation du graphique
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const ctx = document.getElementById('canvas-product-area-linechart').getContext('2d');
+        new Chart(ctx, areaLineChartProductConfig);
+    });
+</script>
 
 
 
