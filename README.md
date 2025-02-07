@@ -1,5 +1,12 @@
-# Trave![Capture d'écran 2025-02-07 175548](https://github.com/user-attachments/assets/26c995a2-dc1b-4139-84f7-019c2810d13d)
-l Laravel 11
+![screencapture-127-0-0-1-8000-2025-02-07-17_54_16](https://github.com/user-attachments/assets/91afc7a9-bfcb-4d07-b06c-d893b11f2464)![Capture d'écran 2025-02-07 180010](https://github.com/user-attachments/assets/5a6dc951-c79c-4ad5-a42a-ef292df040aa)
+l Laravel 11![Uploading screenc![Capture d'écran 2025-02-07 175548](https://github.com/user-attachments/assets/037c50cb-bd3d-4823-b039-aeafe6b72205)
+apture-127-0-0-1-8000-2025-02-07-17_54_16.png…]()
+![screencapture-127-0-0-1-8000-2025-02-07-17_54_44](https://github.com/user-attachments/assets/ae3a8b42-bfce-4892-8638-1344ac0914cf)
+
+![Capture d'écran 2025-02-07 175914](https://github.com/user-attachments/assets/4f6da6b3-0e61-4c81-8b6c-4938f5722849)
+![Uploading Capture d'écran 2025-0![Capture d'écran 2025-02-07 180038](https://github.com/user-attachments/assets/8db0e3a3-a4fb-430c-89f5-ad86ad8a6085)
+2-07 180010.png…]()![Capture d'écran 2025-02-07 180114](https://github.com/user-attachments/assets/5a42297f-9d89-4cd7-9eb2-d692ec8c80f6)
+
 
 Ce projet est une application Laravel 11 de gestion de voyages multilingue.
 
