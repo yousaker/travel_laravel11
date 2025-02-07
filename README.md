@@ -96,7 +96,7 @@ Suivez ces étapes pour configurer et lancer le projet sur votre machine locale 
 
 ## Auteur
 
-- **Youcef Saker**
+- **Youcef Skr**
 - [Profil GitHub](https://github.com/yousaker)
 
 ## Licence
