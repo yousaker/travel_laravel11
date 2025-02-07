@@ -1,12 +1,10 @@
-![screencapture-127-0-0-1-8000-2025-02-07-17_54_16](https://github.com/user-attachments/assets/91afc7a9-bfcb-4d07-b06c-d893b11f2464)![Capture d'écran 2025-02-07 180010](https://github.com/user-attachments/assets/5a6dc951-c79c-4ad5-a42a-ef292df040aa)
-l Laravel 11![Uploading screenc![Capture d'écran 2025-02-07 175548](https://github.com/user-attachments/assets/037c50cb-bd3d-4823-b039-aeafe6b72205)
-apture-127-0-0-1-8000-2025-02-07-17_54_16.png…]()
-![screencapture-127-0-0-1-8000-2025-02-07-17_54_44](https://github.com/user-attachments/assets/ae3a8b42-bfce-4892-8638-1344ac0914cf)
+![screencapture-127-0-0-1-8000-2025-02-07-17_54_44](https://github.com/user-attachments/assets/b282ed6a-c497-48f3-b5c9-7ea5f58b25cd)
+![Uploading screencapture-127-0-0-1-8000![Capture d'écran 2025-02-07 175548](https://github.com/user-attachments/assets/7a9bfa39-bdbc-4532-be6a-359eed1d138e)
+-2025-02-07-17_54_44.png…]()
+![Capture d'écran 2025-02-07 175914](https://github.com/user-attachments/assets/e0ae18e4-393a-463a-8532-51e586c09480)
+![Capture d'écran 2025-02-07 180114](https://github.com/user-attachments/assets/f9b0ab80-2285-40f2-b076-e994468b20f2)
 
-![Capture d'écran 2025-02-07 175914](https://github.com/user-attachments/assets/4f6da6b3-0e61-4c81-8b6c-4938f5722849)
-![Uploading Capture d'écran 2025-0![Capture d'écran 2025-02-07 180038](https://github.com/user-attachments/assets/8db0e3a3-a4fb-430c-89f5-ad86ad8a6085)
-2-07 180010.png…]()![Capture d'écran 2025-02-07 180114](https://github.com/user-attachments/assets/5a42297f-9d89-4cd7-9eb2-d692ec8c80f6)
-
+![Capture d'écran 2025-02-07 180010](https://github.com/user-attachments/assets/19d1e67e-c09e-4db9-8677-22b4c1d6bb8e)
 
 Ce projet est une application Laravel 11 de gestion de voyages multilingue.
 
@@ -97,7 +95,7 @@ Suivez ces étapes pour configurer et lancer le projet sur votre machine locale 
 ## Fonctionnalités
 
 - Gestion des voyages
-- Multilingue (Français et Anglais)
+- Multilingue (Arabe et Anglais)
 - Envoi d'emails via Gmail
 - Réservation et gestion des produits
 - Interface utilisateur moderne
