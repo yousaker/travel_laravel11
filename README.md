@@ -106,7 +106,4 @@ Suivez ces étapes pour configurer et lancer le projet sur votre machine locale 
 - **Youcef Skr**
 - [Profil GitHub](https://github.com/yousaker)
 
-## Licence
-
-Ce projet est sous licence MIT.
 
